@@ -8,6 +8,8 @@ class ImageListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+
+    func configCell(for cell: ImagesListCell) { }
 }
 
 extension ImageListViewController: UITableViewDelegate {
@@ -18,7 +20,14 @@ extension ImageListViewController: UITableViewDelegate {
 
 extension ImageListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier, for: indexPath)
+
+        guard let imageListCell = cell as? ImagesListCell else {
+            return UITableViewCell()
+        }
+
+        configCell(for: imageListCell)
+        return imageListCell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
