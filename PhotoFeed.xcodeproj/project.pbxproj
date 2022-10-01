@@ -85,8 +85,8 @@
 				A9CB100828DCC565000609D0 /* AppDelegate.swift */,
 				A9CB100A28DCC565000609D0 /* SceneDelegate.swift */,
 				A9CB100E28DCC565000609D0 /* Main.storyboard */,
-				A9CB101128DCC567000609D0 /* Assets.xcassets */,
 				A9CB101328DCC567000609D0 /* LaunchScreen.storyboard */,
+				A9CB101128DCC567000609D0 /* Assets.xcassets */,
 				A9CB101628DCC567000609D0 /* Info.plist */,
 			);
 			path = PhotoFeed;
