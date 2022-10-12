@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adw-ed-ZGV">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -94,11 +94,83 @@
             </objects>
             <point key="canvasLocation" x="46.376811594202906" y="-2.6785714285714284"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="eHe-Y0-9IG">
+            <objects>
+                <viewController title="Profile" id="adw-ed-ZGV" customClass="ProfileViewController" customModule="PhotoFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUO-3c-7ll">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="bID-ft-wvm" userLabel="Avatar Image View">
+                                <rect key="frame" x="16" y="76" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="BlU-4Z-6nk"/>
+                                    <constraint firstAttribute="height" constant="70" id="poA-Vn-AAy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9M-eT-4yg" userLabel="Name Label">
+                                <rect key="frame" x="20" y="165" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="YP White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voz-57-gOd" userLabel="Login Label">
+                                <rect key="frame" x="20" y="194" width="157" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="YP White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="description label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emh-qB-QEd">
+                                <rect key="frame" x="20" y="225" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="YP White"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fQ-Hb-WtQ" userLabel="Logout Button">
+                                <rect key="frame" x="319" y="98" width="75" height="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain" image="logout_button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yq8-mu-E0o"/>
+                        <color key="backgroundColor" name="YP Black"/>
+                        <constraints>
+                            <constraint firstItem="emh-qB-QEd" firstAttribute="top" secondItem="Voz-57-gOd" secondAttribute="bottom" constant="8" id="2xr-QU-cIn"/>
+                            <constraint firstItem="k9M-eT-4yg" firstAttribute="top" secondItem="bID-ft-wvm" secondAttribute="bottom" constant="8" id="50V-zg-hXu"/>
+                            <constraint firstItem="emh-qB-QEd" firstAttribute="trailing" secondItem="k9M-eT-4yg" secondAttribute="trailing" id="EEB-M2-gY0"/>
+                            <constraint firstItem="bID-ft-wvm" firstAttribute="leading" secondItem="Yq8-mu-E0o" secondAttribute="leading" constant="16" id="EbK-mE-XfX"/>
+                            <constraint firstItem="bID-ft-wvm" firstAttribute="top" secondItem="Yq8-mu-E0o" secondAttribute="top" constant="32" id="HF0-jz-OYc"/>
+                            <constraint firstItem="Yq8-mu-E0o" firstAttribute="trailing" secondItem="k9M-eT-4yg" secondAttribute="trailing" constant="16" id="MGg-vs-uua"/>
+                            <constraint firstItem="k9M-eT-4yg" firstAttribute="leading" secondItem="bID-ft-wvm" secondAttribute="leading" id="SJm-pS-NVl"/>
+                            <constraint firstItem="Voz-57-gOd" firstAttribute="trailing" secondItem="k9M-eT-4yg" secondAttribute="trailing" id="Tfu-rk-aNV"/>
+                            <constraint firstItem="emh-qB-QEd" firstAttribute="leading" secondItem="k9M-eT-4yg" secondAttribute="leading" id="bQ7-9i-zVL"/>
+                            <constraint firstItem="1fQ-Hb-WtQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bID-ft-wvm" secondAttribute="trailing" id="g1Z-HL-SAW"/>
+                            <constraint firstItem="Voz-57-gOd" firstAttribute="leading" secondItem="k9M-eT-4yg" secondAttribute="leading" id="gqe-0H-n9f"/>
+                            <constraint firstItem="1fQ-Hb-WtQ" firstAttribute="top" secondItem="Yq8-mu-E0o" secondAttribute="top" constant="56" id="hj9-m5-0Nq"/>
+                            <constraint firstItem="Voz-57-gOd" firstAttribute="top" secondItem="k9M-eT-4yg" secondAttribute="bottom" constant="8" id="kSE-qn-5n2"/>
+                            <constraint firstItem="Yq8-mu-E0o" firstAttribute="trailing" secondItem="1fQ-Hb-WtQ" secondAttribute="trailing" constant="16" id="o1S-Zy-4n6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageVieW" destination="bID-ft-wvm" id="kP5-NL-jxL"/>
+                        <outlet property="descriptionLabel" destination="emh-qB-QEd" id="9yw-kh-1uT"/>
+                        <outlet property="loginNameLabel" destination="Voz-57-gOd" id="viG-04-erd"/>
+                        <outlet property="logoutButton" destination="1fQ-Hb-WtQ" id="pHI-vc-CXK"/>
+                        <outlet property="usernameLabel" destination="k9M-eT-4yg" id="TQO-rP-pcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kI-Ox-Z2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834.78260869565224" y="-3.3482142857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="Active Like" width="30" height="26"/>
+        <image name="avatar" width="70" height="70"/>
         <image name="button_like_on" width="42" height="42"/>
+        <image name="logout_button" width="20" height="22"/>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
