@@ -9,6 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2HL-Hy-Aew">
+            <objects>
+                <tabBarController id="6iV-li-78n" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OVR-vk-Vp1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="k35-51-A2X"/>
+                        <segue destination="adw-ed-ZGV" kind="relationship" relationship="viewControllers" id="0d8-oz-TTH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l45-X9-8sQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1699" y="-47"/>
+        </scene>
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -86,13 +104,14 @@
                             <constraint firstAttribute="bottom" secondItem="UBZ-G5-dAg" secondAttribute="bottom" id="bbk-uL-XJJ"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="w92-BL-LLq"/>
                     <connections>
                         <outlet property="tableView" destination="UBZ-G5-dAg" id="olV-se-cTq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.376811594202906" y="-2.6785714285714284"/>
+            <point key="canvasLocation" x="-610" y="-435"/>
         </scene>
         <!--Profile-->
         <scene sceneID="eHe-Y0-9IG">
@@ -152,6 +171,7 @@
                             <constraint firstItem="Yq8-mu-E0o" firstAttribute="trailing" secondItem="1fQ-Hb-WtQ" secondAttribute="trailing" constant="16" id="o1S-Zy-4n6"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Pfm-X3-oqt"/>
                     <connections>
                         <outlet property="avatarImageVieW" destination="bID-ft-wvm" id="kP5-NL-jxL"/>
                         <outlet property="descriptionLabel" destination="emh-qB-QEd" id="9yw-kh-1uT"/>
@@ -162,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kI-Ox-Z2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834.78260869565224" y="-3.3482142857142856"/>
+            <point key="canvasLocation" x="-610" y="362"/>
         </scene>
     </scenes>
     <resources>
@@ -171,6 +191,7 @@
         <image name="avatar" width="70" height="70"/>
         <image name="button_like_on" width="42" height="42"/>
         <image name="logout_button" width="20" height="22"/>
+        <image name="tab_editorial_active" width="30" height="30"/>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
