@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adw-ed-ZGV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6iV-li-78n">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="YP White"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="YP Black"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="k35-51-A2X"/>
@@ -171,7 +175,7 @@
                             <constraint firstItem="Yq8-mu-E0o" firstAttribute="trailing" secondItem="1fQ-Hb-WtQ" secondAttribute="trailing" constant="16" id="o1S-Zy-4n6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Pfm-X3-oqt"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile_editorial_active" id="Pfm-X3-oqt"/>
                     <connections>
                         <outlet property="avatarImageVieW" destination="bID-ft-wvm" id="kP5-NL-jxL"/>
                         <outlet property="descriptionLabel" destination="emh-qB-QEd" id="9yw-kh-1uT"/>
@@ -191,6 +195,7 @@
         <image name="avatar" width="70" height="70"/>
         <image name="button_like_on" width="42" height="42"/>
         <image name="logout_button" width="20" height="22"/>
+        <image name="profile_editorial_active" width="24" height="24"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
