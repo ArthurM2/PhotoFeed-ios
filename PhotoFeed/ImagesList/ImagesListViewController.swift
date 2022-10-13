@@ -1,9 +1,23 @@
 import UIKit
 
-class ImagesListViewController: UIViewController {
+// MARK: - ViewController
+final class ImagesListViewController: UIViewController {
+    private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
+    private var photosName = [String]()
+
     @IBOutlet private var tableView: UITableView!
 
-    private var photosName = [String]()
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ShowSingleImageSegueIdentifier {
+            let viewController = segue.destination as! SingleImageViewController
+            let indexPath = sender as! IndexPath
+            let image = UIImage(named: photosName[indexPath.row])
+            viewController.image = image
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +27,7 @@ class ImagesListViewController: UIViewController {
         photosName = Array(0..<20).map { "\($0)" }
     }
 
+
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -21,6 +36,7 @@ class ImagesListViewController: UIViewController {
     }()
 }
 
+// MARK: - Extension
 extension ImagesListViewController {
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
         guard let image = UIImage(named: photosName[indexPath.row]) else {
@@ -36,6 +52,7 @@ extension ImagesListViewController {
     }
 }
 
+// MARK: - DataSource
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier, for: indexPath)
@@ -53,6 +70,9 @@ extension ImagesListViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Delegate
 extension ImagesListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: ShowSingleImageSegueIdentifier, sender: indexPath)
+    }
 }
