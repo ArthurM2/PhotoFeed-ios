@@ -218,7 +218,7 @@
                                     <outlet property="delegate" destination="R1F-2L-xoa" id="4lt-jf-VVF"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M75-l3-yd6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M75-l3-yd6" userLabel="back_button">
                                 <rect key="frame" x="8" y="56" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="QRR-84-sRP"/>
@@ -230,13 +230,27 @@
                                     <action selector="didTapBackButton" destination="R1F-2L-xoa" eventType="touchUpInside" id="VVI-vr-pp7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLu-HW-dZH" userLabel="share_button">
+                                <rect key="frame" x="182" y="796" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7cd-q9-aua"/>
+                                    <constraint firstAttribute="width" constant="50" id="Vre-km-huW"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="share_button"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="R1F-2L-xoa" eventType="touchUpInside" id="gc0-iE-UNf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eq9-qX-VTZ"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="M75-l3-yd6" firstAttribute="top" secondItem="Eq9-qX-VTZ" secondAttribute="top" constant="8" id="3QM-gF-luE"/>
                             <constraint firstItem="tD8-Fz-k8n" firstAttribute="leading" secondItem="Eq9-qX-VTZ" secondAttribute="leading" id="JiH-Oc-Lg6"/>
+                            <constraint firstItem="Eq9-qX-VTZ" firstAttribute="bottom" secondItem="zLu-HW-dZH" secondAttribute="bottom" constant="16" id="LHL-0a-kJZ"/>
                             <constraint firstItem="Eq9-qX-VTZ" firstAttribute="trailing" secondItem="tD8-Fz-k8n" secondAttribute="trailing" id="fx2-jD-fwc"/>
+                            <constraint firstItem="zLu-HW-dZH" firstAttribute="centerX" secondItem="Eq9-qX-VTZ" secondAttribute="centerX" id="lho-Sg-15X"/>
                             <constraint firstItem="tD8-Fz-k8n" firstAttribute="bottom" secondItem="jGT-4I-bub" secondAttribute="bottom" id="py7-CD-cef"/>
                             <constraint firstItem="M75-l3-yd6" firstAttribute="leading" secondItem="Eq9-qX-VTZ" secondAttribute="leading" constant="8" id="uTL-5F-ugu"/>
                             <constraint firstAttribute="top" secondItem="tD8-Fz-k8n" secondAttribute="top" id="wTj-m5-XyS"/>
@@ -261,6 +275,7 @@
         <image name="logout_button" width="20" height="22"/>
         <image name="nav_back_button" width="9" height="16"/>
         <image name="profile_editorial_active" width="24" height="24"/>
+        <image name="share_button" width="50" height="50"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
