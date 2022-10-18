@@ -214,6 +214,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="439-Zb-nAh"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="U1C-ut-vtR"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R1F-2L-xoa" id="4lt-jf-VVF"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M75-l3-yd6">
                                 <rect key="frame" x="8" y="56" width="48" height="48"/>
@@ -242,6 +245,7 @@
                     <navigationItem key="navigationItem" id="OPm-qt-6T4"/>
                     <connections>
                         <outlet property="imageView" destination="mdP-SI-Gpn" id="NFs-Zo-aWJ"/>
+                        <outlet property="scrollView" destination="tD8-Fz-k8n" id="ErP-ff-kBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgb-su-49E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
